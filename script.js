@@ -1,5 +1,6 @@
 // prendo bottone 
 const bottoneInput = document.getElementById("submit-btn")
+const outputDiv = document.getElementById("output")
 
 // se viene cliccato allora parte la funzione
 bottoneInput.addEventListener("click",function bottone(){
@@ -15,6 +16,9 @@ bottoneInput.addEventListener("click",function bottone(){
         let sconto = (prezzoBiglietto / 100) * 20
         prezzoBiglietto = prezzoBiglietto - sconto;
         console.log(prezzoBiglietto.toFixed(2));
+        outputDiv.innerHTML = `
+         <div class="row justify-content-center mt-4">Prezzo ${prezzoBiglietto.toFixed(2)}€</div>
+        `
         
     }
     else if (anni >= 65){
@@ -24,6 +28,7 @@ bottoneInput.addEventListener("click",function bottone(){
         
     }
     else{
+        
         console.log(prezzoBiglietto.toFixed(2))
     }
 })
