@@ -21,10 +21,7 @@ bottoneInput.addEventListener("click", function bottone() {
 
     // calcolo prezzo e sconti e poi ritorno in schermo la value 
     if (anni < 18) {
-
-        let sconto = (prezzoBiglietto / 100) * 20
-        prezzoBiglietto = prezzoBiglietto - sconto;
-        console.log(prezzoBiglietto.toFixed(2));
+        prezzoBiglietto *= 0.8;
 
         outputDiv.innerHTML = `
          <div class="row justify-content-center mt-4">Prezzo ${prezzoBiglietto.toFixed(2)}€</div>
@@ -32,9 +29,7 @@ bottoneInput.addEventListener("click", function bottone() {
 
     }
     else if (anni >= 65) {
-
-        let sconto = (prezzoBiglietto / 100) * 40;
-        prezzoBiglietto = prezzoBiglietto - sconto;
+        prezzoBiglietto *= 0.6; 
 
         outputDiv.innerHTML = `
          <div class="row justify-content-center mt-4">Prezzo ${prezzoBiglietto.toFixed(2)}€</div>
