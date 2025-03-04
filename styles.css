@@ -1,0 +1,23 @@
+@keyframes m {
+    to{
+        background-position: 20%;
+        background-size: 1250px;
+
+    }
+}
+body{
+    background: linear-gradient(
+     30deg,
+        #7199ff 20%,
+        rgb(180, 217, 255) 20% 40%,
+        rgb(215, 238, 255) 40% 60%,
+        rgb(255, 255, 255) 60% 70%,
+        rgb(191, 219, 255) 70% 90%,
+        #7ab4ff 90%
+    );
+    background-size: 800px;
+    background-repeat: repeat;
+    animation: m infinite 7s alternate;
+};
+
+
